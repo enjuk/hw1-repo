@@ -16,8 +16,8 @@ public:
 private:
     const static int RANK_SIZE = 13;
     const static int SUIT_SIZE = 4;
-    const static std::string possibleRanks[RANK_SIZE];
-    const static std::string possibleSuits[SUIT_SIZE];
+    const static Rank allRanks[RANK_SIZE];
+    const static Suit allSuits[SUIT_SIZE];
     std::list<Card*> cards;
 };
 
