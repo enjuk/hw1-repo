@@ -3,13 +3,17 @@
 #include <iomanip>
 using namespace std;
 
-const string Deck::possibleRanks[RANK_SIZE] = {"2", "3", "4", "5", "6", "7",
-                                            "8", "9", "10", "J", "Q", "K", "A"};
-const string Deck::possibleSuits[SUIT_SIZE] = {"\u2663", "\u2662", "\u2661", 
-                                               "\u2660"};
+const Rank Deck::allRanks[RANK_SIZE] = 
+                  {Rank::two, Rank::three, Rank::four, Rank::five, Rank::six,
+                   Rank::seven, Rank::eight, Rank::nine, Rank::ten, Rank::jack,
+                   Rank::queen, Rank::king, Rank::ace};
+
+const Suit Deck::allSuits[SUIT_SIZE] =
+                  {Suit::clubs, Suit::diamonds, Suit::hearts, Suit::spades};
+
 Deck::Deck() { 
-    for (const auto& suit : possibleSuits) {
-        for (const auto& rank : possibleRanks) {
+    for (const auto& suit : allSuits) {
+        for (const auto& rank : allRanks) {
             cards.push_back(new Card(rank, suit));
         }
     }
