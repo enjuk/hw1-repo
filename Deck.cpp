@@ -3,13 +3,10 @@
 #include <iomanip>
 using namespace std;
 
-const Rank Deck::allRanks[RANK_SIZE] = 
-                  {Rank::two, Rank::three, Rank::four, Rank::five, Rank::six,
-                   Rank::seven, Rank::eight, Rank::nine, Rank::ten, Rank::jack,
-                   Rank::queen, Rank::king, Rank::ace};
+const Rank Deck::allRanks[RANK_SIZE] = {TWO, THREE, FOUR, FIVE, SIX, SEVEN,
+                                      EIGHT, NINE, TEN, JACK, QUEEN, KING, ACE};
 
-const Suit Deck::allSuits[SUIT_SIZE] =
-                  {Suit::clubs, Suit::diamonds, Suit::hearts, Suit::spades};
+const Suit Deck::allSuits[SUIT_SIZE] = {CLUBS, DIAMONDS, HEARTS, SPADES};
 
 Deck::Deck() { 
     for (const auto& suit : allSuits) {

@@ -4,13 +4,13 @@
 #ifndef CARD_H
 #define CARD_H
 
-enum class Rank {
-    two = 2, three, four, five, six, seven, eight, nine, ten, jack, queen,
-    king, ace
+enum Rank {
+    TWO = 2, THREE, FOUR, FIVE, SIX, SEVEN, EIGHT, NINE, TEN, JACK, QUEEN,
+    KING, ACE
 };
 
-enum class Suit {
-    clubs = 1, diamonds, hearts, spades
+enum Suit {
+    CLUBS = 1, DIAMONDS, HEARTS, SPADES
 };
 
 class Card {
